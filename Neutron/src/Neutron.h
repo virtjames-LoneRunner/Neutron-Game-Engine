@@ -2,6 +2,7 @@
 
 // For use by Neutron Applications
 #include "Neutron/Application.h"
+#include "Neutron/Log.h"
 
 
 // --- Entry Point ---------------

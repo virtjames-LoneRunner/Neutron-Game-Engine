@@ -1,0 +1,3 @@
+[submodule "Neutron/vendor/spdlog"]
+	path = Neutron/vendor/spdlog
+	url = https://github.com/gabime/spdlog
