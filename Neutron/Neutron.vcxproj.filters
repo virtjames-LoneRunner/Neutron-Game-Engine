@@ -7,6 +7,12 @@
     <Filter Include="Neutron">
       <UniqueIdentifier>{50EA1D6C-BCC9-9C07-C5E1-27DE31400369}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Events\ApplicationEvent.h">
@@ -34,6 +40,13 @@
     <ClInclude Include="src\Neutron\Log.h">
       <Filter>Neutron</Filter>
     </ClInclude>
+    <ClInclude Include="src\Neutron\Window.h">
+      <Filter>Neutron</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ntpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Neutron\Application.cpp">
@@ -42,5 +55,9 @@
     <ClCompile Include="src\Neutron\Log.cpp">
       <Filter>Neutron</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ntpch.cpp" />
   </ItemGroup>
 </Project>

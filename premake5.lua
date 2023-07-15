@@ -8,7 +8,13 @@ workspace "Neutron"
 		"Dist"
 	}
 
+-- Include directories relative to the root folder	
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+
+IncludeDir = {}
+IncludeDir["GLFW"] = "Neutron/vendor/GLFW/include"
+
+include "Neutron/vendor/GLFW"
 
 project "Neutron"
 	location "Neutron"
@@ -17,6 +23,9 @@ project "Neutron"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	pchheader "ntpch.h"
+	pchsource "Neutron/src/ntpch.cpp"
 
 	files
 	{
@@ -27,7 +36,14 @@ project "Neutron"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"

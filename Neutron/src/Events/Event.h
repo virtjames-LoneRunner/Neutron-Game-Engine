@@ -2,11 +2,6 @@
 
 #include "Neutron/Core.h"
 
-#include <string>
-#include <functional>
-#include <sstream>
-
-
 namespace Neutron {
 
 	// This Event System is currently blocking, which means that it will be executed once
@@ -22,14 +17,14 @@ namespace Neutron {
 
 	enum EventCategory {
 		None = 0,
-		EventCategoryApplication	= BIT(0),
-		EventCategoryInput			= BIT(0),
-		EventCategoryKeyboard		= BIT(0),
-		EventCategoryMouse			= BIT(0),
-		EventCategoryMouseButton	= BIT(0),
+		EventCategoryApplication	= BIT(0), // 00000001  Using Bitwise Operations to determine 
+		EventCategoryInput			= BIT(1), // 00000010  if a category belongs with the other
+		EventCategoryKeyboard		= BIT(2), // 00000100  by determining if there are any 1's left
+		EventCategoryMouse			= BIT(3), // 00001000  during evaluation
+		EventCategoryMouseButton	= BIT(4), // 00010000  Ex: ( 00010000 | 000010000 ) => 00011000 => CHECK IF: (0011000 & CATEGORY: 00100000)
 	};
 
-#define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::type; }\
+#define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; }\
 							   virtual EventType GetEventType() const override { return GetStaticType(); }\
 							   virtual const char* GetName() const override { return #type; }
 
@@ -49,7 +44,7 @@ namespace Neutron {
 		
 		bool IsInCategory(EventCategory category)
 		{
-			return GetCategoryFlags() & category;
+			return GetCategoryFlags() & category; // Bitwise &
 		}
 	};
 

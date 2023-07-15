@@ -2,6 +2,7 @@
 
 #include "Core.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"						// Allows for logging of custom types
 #include "spdlog/sinks/stdout_color_sinks.h"
 
 namespace Neutron 
