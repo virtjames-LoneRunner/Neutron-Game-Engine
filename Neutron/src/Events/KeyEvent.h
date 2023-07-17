@@ -40,6 +40,7 @@ namespace Neutron
 
 	class KeyReleasedEvent : public KeyEvent
 	{
+	public:
 		KeyReleasedEvent(int keycode)
 			: KeyEvent(keycode) {}
 
