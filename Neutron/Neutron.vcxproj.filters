@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Events">
-      <UniqueIdentifier>{3A8963B1-262B-8E87-0FE6-A1DBFB2615D8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Neutron">
       <UniqueIdentifier>{50EA1D6C-BCC9-9C07-C5E1-27DE31400369}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Neutron\Events">
+      <UniqueIdentifier>{34DC1AD6-20AA-0EDC-093E-7F02F5AAEA40}</UniqueIdentifier>
     </Filter>
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
@@ -15,18 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Events\ApplicationEvent.h">
-      <Filter>Events</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Events\Event.h">
-      <Filter>Events</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Events\KeyEvent.h">
-      <Filter>Events</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Events\MouseEvent.h">
-      <Filter>Events</Filter>
-    </ClInclude>
     <ClInclude Include="src\Neutron.h" />
     <ClInclude Include="src\Neutron\Application.h">
       <Filter>Neutron</Filter>
@@ -35,6 +23,24 @@
       <Filter>Neutron</Filter>
     </ClInclude>
     <ClInclude Include="src\Neutron\EntryPoint.h">
+      <Filter>Neutron</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Neutron\Events\ApplicationEvent.h">
+      <Filter>Neutron\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Neutron\Events\Event.h">
+      <Filter>Neutron\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Neutron\Events\KeyEvent.h">
+      <Filter>Neutron\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Neutron\Events\MouseEvent.h">
+      <Filter>Neutron\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Neutron\Layer.h">
+      <Filter>Neutron</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Neutron\LayerStack.h">
       <Filter>Neutron</Filter>
     </ClInclude>
     <ClInclude Include="src\Neutron\Log.h">
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Neutron\Application.cpp">
+      <Filter>Neutron</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Neutron\Layer.cpp">
+      <Filter>Neutron</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Neutron\LayerStack.cpp">
       <Filter>Neutron</Filter>
     </ClCompile>
     <ClCompile Include="src\Neutron\Log.cpp">

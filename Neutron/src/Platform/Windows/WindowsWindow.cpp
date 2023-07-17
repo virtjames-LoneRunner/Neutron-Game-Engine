@@ -2,9 +2,9 @@
 
 #include "WindowsWindow.h"
 
-#include "Events/ApplicationEvent.h"
-#include "Events/MouseEvent.h"
-#include "Events/KeyEvent.h"
+#include "Neutron/Events/ApplicationEvent.h"
+#include "Neutron/Events/MouseEvent.h"
+#include "Neutron/Events/KeyEvent.h"
 
 namespace Neutron {
 	

@@ -2,6 +2,7 @@
 
 // For use by Neutron Applications
 #include "Neutron/Application.h"
+#include "Neutron/Layer.h"
 #include "Neutron/Log.h"
 
 

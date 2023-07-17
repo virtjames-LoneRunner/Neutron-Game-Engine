@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ntpch.h"
-#include "Events/Event.h"
+#include "Neutron/Events/Event.h"
 
 namespace Neutron {
 

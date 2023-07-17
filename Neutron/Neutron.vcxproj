@@ -84,6 +84,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -110,6 +111,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -137,6 +139,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -152,14 +155,16 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Events\ApplicationEvent.h" />
-    <ClInclude Include="src\Events\Event.h" />
-    <ClInclude Include="src\Events\KeyEvent.h" />
-    <ClInclude Include="src\Events\MouseEvent.h" />
     <ClInclude Include="src\Neutron.h" />
     <ClInclude Include="src\Neutron\Application.h" />
     <ClInclude Include="src\Neutron\Core.h" />
     <ClInclude Include="src\Neutron\EntryPoint.h" />
+    <ClInclude Include="src\Neutron\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Neutron\Events\Event.h" />
+    <ClInclude Include="src\Neutron\Events\KeyEvent.h" />
+    <ClInclude Include="src\Neutron\Events\MouseEvent.h" />
+    <ClInclude Include="src\Neutron\Layer.h" />
+    <ClInclude Include="src\Neutron\LayerStack.h" />
     <ClInclude Include="src\Neutron\Log.h" />
     <ClInclude Include="src\Neutron\Window.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
@@ -167,6 +172,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Neutron\Application.cpp" />
+    <ClCompile Include="src\Neutron\Layer.cpp" />
+    <ClCompile Include="src\Neutron\LayerStack.cpp" />
     <ClCompile Include="src\Neutron\Log.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\ntpch.cpp">
